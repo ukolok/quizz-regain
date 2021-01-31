@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte - Activ'Regain
+{% endblock %}
+
+{% block content %}
+	<h1>Mon compte</h1>
+	{{app.user.firstname}}, bienvenue dans votre compte.
+	<hr>
+	<a href="{{path('account_password')}}">Modifier mon mot de passe</a>
+{% endblock %}

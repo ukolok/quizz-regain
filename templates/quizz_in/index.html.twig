@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Activ'Regain - Questionnaire INRS
+{% endblock %}
+
+{% block content %}
+	<h1>Bienvenue dans votre questionnaire</h1>
+</br>
+<a class="nav-link" href=" {{ path('quizz',{'slug':'civilite'}) }} ">Commencez le questionnaire</a>{% endblock %}

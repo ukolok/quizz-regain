@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Section
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="jumbotron jumbotron-fluid mb-2 p-1">
+					<div class="container">
+						<h1 class="display-6">{{ section_name  }}</h1>
+						<p class="lead">{{ section_description | raw  }}</p>
+						<hr class="my-4">
+						<p>{{ section_utilisation | raw }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{form_start(form) }}
+			<div class="col-12">
+				<b>
+					<p>
+						<div class="text-uppercase"></div>
+					</p>
+				</b>
+			</P>
+			{% if form.vars.help ?? false %}
+				<div class="form--help">{{ form.vars.help }}</div>
+			{% endif %}
+			{{ form_end(form) }}
+		</div>
+
+	</div>
+{% endblock %}
